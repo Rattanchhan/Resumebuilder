@@ -1,0 +1,101 @@
+﻿<Window x:Class="ResumeBuilder.Template2" x:Name="PrintTemplate2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResumeBuilder"
+          mc:Ignorable="d"
+          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+          TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+          TextElement.FontWeight="Regular"
+          TextElement.FontSize="13"
+          TextOptions.TextFormattingMode="Ideal"
+          Background="{DynamicResource MaterialDesignPaper}"
+          FontFamily="{DynamicResource MaterialDesignFont}"
+          Title="Template2" Height="842" Width="595" Loaded="Window_Loaded">
+    <Grid Background="#FF1C1C1C" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Orientation="Vertical">
+                    <Label  FontSize="20" FontFamily="AKbalthom KhmerHand" Foreground="#FFD5BB89" FontWeight="Bold">Personal Profile</Label>
+                    <Border Margin="-265,0,0,0" Background="#FF645D4A" Height="3px" Width="230px"></Border>
+                    <TextBlock x:Name="_text" TextWrapping="Wrap" Margin="5,5,0,0" Width="500" TextAlignment="Left" FontSize="12" Foreground="White">
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" Orientation="Vertical">
+                    <Label Margin="-4,0,0,0"  FontSize="20" FontFamily="AKbalthom KhmerHand" Foreground="#FFD5BB89" FontWeight="Bold">Work Experience</Label>
+                    <Border Margin="-265,0,0,0" Background="#FF645D4A" Height="3px" Width="230px"></Border>
+                    <Label FontFamily="Roboto" FontSize="12" x:Name="JobTitle1" HorizontalAlignment="Left" Foreground="#FFD5BB89"></Label>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <StackPanel Margin="0,0,0,0" Orientation="Horizontal">
+                            <Label FontFamily="Roboto" FontSize="12" x:Name="StartDateMonth" Foreground="White"></Label>
+                            <Label FontFamily="Roboto" FontSize="12" Foreground="White" >-</Label>
+                            <Label FontFamily="Roboto" FontSize="12" x:Name="StartDateYear" Foreground="White"></Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label FontFamily="Roboto" FontSize="12" x:Name="EndDateMonth" Foreground="White"></Label>
+                            <Label FontFamily="Roboto" FontSize="12" Foreground="White">-</Label>
+                            <Label FontFamily="Roboto" FontSize="12" x:Name="EndDateYear" Foreground="White"></Label>
+                        </StackPanel>
+                    </StackPanel>
+                    <TextBlock FontFamily="Roboto" x:Name="JobDescription" TextWrapping="Wrap" Margin="5,5,0,0" Width="500" TextAlignment="Left" FontSize="12" Foreground="White">
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Border HorizontalAlignment="Center" Grid.Column="0" Margin="0,0,0,0" Height="120" Width="120">
+                <Image x:Name="CoverImage1" Source="Images/resume.png"  HorizontalAlignment="Center" Stretch="Fill"></Image>
+            </Border>
+            <Grid  Grid.Column="1">
+                <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <Label x:Name="FirstName" Margin="1,0,0,0"  Foreground="#FFD5BB89" FontSize="20"></Label>
+                            <Label x:Name="LastName" Margin="1,0,0,0"  Foreground="#FFD5BB89" FontSize="20"></Label>
+                        </StackPanel>
+                        <TextBlock x:Name="JobTitle" Margin="6,-6,0,0" Foreground="White" FontSize="10"></TextBlock>
+                    </StackPanel>
+
+
+                    <Border Margin="6,10,0,0" Background="#FF645D4A" Height="3px" Width="400"></Border>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel  Orientation="Horizontal">
+                            <Label Margin="2,0,0,0" FontSize="8" Foreground="White">Phone:</Label>
+                            <Label x:Name="PhoneNumber" FontSize="8" Foreground="White"></Label>
+                            <Label Foreground="White" FontSize="8">-</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label FontSize="8" Foreground="White">Email:</Label>
+                            <Label x:Name="Email" FontSize="8" Foreground="White"></Label>
+                            <Label Foreground="White" FontSize="8">-</Label>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label FontSize="8" Foreground="White">Address:</Label>
+                            <Label x:Name="Address" FontSize="8" Foreground="White"></Label>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
